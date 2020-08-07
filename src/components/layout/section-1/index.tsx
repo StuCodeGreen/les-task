@@ -1,19 +1,33 @@
 import React from 'react';
 import './index.css';
+import loveLogo from '../../../images/love-water-savings-logo.png';
+import trustLogo from '../../../images/trust-pilot-logo.svg';
 
-function SectionOne() {
+interface Props {
+  title: string;
+  firstP: string;
+  secondP: string;
+  thirdP: string;
+}
+
+const SectionOne: React.FC<Props> = ({ title, firstP, secondP, thirdP }) => {
   return (
     <section className="section-one">
       <div className="container section-one-content">
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-          neque. Architecto aliquam impedit totam neque facilis illum delectus
-          necessitatibus laborum.
+        <div className="content-text">
+          <h1 className="title">{title}</h1>
+          <p>{firstP}</p>
+          <p>{secondP}</p>
+          <p>{thirdP}</p>
+          <div className="content-logo">
+            <img src={loveLogo} alt="Logo" width="150px" />
+            <img src={trustLogo} alt="Logo" width="100px" />
+          </div>
         </div>
-        <div className="quote-form">test</div>
+        <div className="quote-form"></div>
       </div>
     </section>
   );
-}
+};
 
 export default SectionOne;
