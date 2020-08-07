@@ -4,6 +4,7 @@
   flex-direction: row;
 }
 .nav .nav-content {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -11,16 +12,26 @@
 
 .nav-menu {
   list-style: none;
+  justify-content: center;
 }
 
+.nav-logo img {
+  width: 158px;
+  padding: 15px;
+}
 .nav-menu-item a {
   text-decoration: none;
   color: #777;
   font-size: 14px;
+  padding-right: 20px;
 }
 
 .nav-menu-item a:hover {
   color: #74c043;
+}
+
+.nav-right {
+  white-space: nowrap;
 }
 
 .nav-right .nav-phone {
@@ -29,4 +40,16 @@
   font-size: 27px;
   letter-spacing: 1px;
   word-spacing: 3px;
+}
+.phone-icon {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  .phone-number {
+    display: none;
+  }
+  .phone-icon {
+    display: block;
+  }
 }

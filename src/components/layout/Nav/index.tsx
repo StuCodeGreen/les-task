@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../../images/love-energy-savings-logo.png';
 import './index.css';
+
 function Nav() {
   return (
     <nav className="nav">
@@ -26,7 +27,10 @@ function Nav() {
         </div>
         <div className="nav-right">
           <a href="tel:08009888375" className="nav-phone">
-            0800 9888 375
+            <span className="phone-number">0800 9888 375</span>
+            <span className="phone-icon">
+              <i className="fa fa-phone"></i>
+            </span>
           </a>
         </div>
       </div>
