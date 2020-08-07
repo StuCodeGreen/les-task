@@ -14,6 +14,13 @@ function Nav() {
             </label>
             <div className="nav-logo">
               <img src={logo} alt="Logo" />
+              <div className="nav-logo-phone">
+                <a href="tel:08009888375" className="nav-phone">
+                  <span className="phone-icon">
+                    <i className="fa fa-phone"></i>
+                  </span>
+                </a>
+              </div>
             </div>
             <ul className="nav-menu">
               <li className="nav-menu-item">
@@ -31,7 +38,7 @@ function Nav() {
             </ul>
           </nav>
         </div>
-        <div className="nav-right">
+        <div className="nav-right-phone">
           <a href="tel:08009888375" className="nav-phone">
             <span className="phone-number">0800 9888 375</span>
             <span className="phone-icon">

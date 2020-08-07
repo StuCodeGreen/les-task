@@ -40,11 +40,15 @@
   color: #74c043;
 }
 
-.nav-right {
+.nav-right-phone {
   white-space: nowrap;
 }
 
-.nav-right .nav-phone {
+.nav-logo-phone {
+  display: none;
+}
+
+.nav-phone {
   font-weight: 700;
   color: #74c043;
   font-size: 27px;
@@ -59,8 +63,9 @@
 
 .navigation .menu-icon {
   cursor: pointer;
-  padding: 10px 10px 10px 0px;
-  position: relative;
+  padding: 20px 10px 10px 0px;
+  position: absolute;
+  left: 0px;
   user-select: none;
   display: none;
 }
@@ -133,19 +138,39 @@
 }
 
 @media (max-width: 767px) {
+  .nav-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  .nav-logo-phone {
+    display: block;
+  }
+
+  .nav-right-phone {
+    display: none;
+  }
+
   .nav-logo img {
     width: 80px;
     padding: 0px;
-    padding-top: 1px;
+    /* padding-top: 1px; */
+    margin-left: 40px;
+  }
+
+  .nav .nav-content {
+    flex-direction: column;
   }
   .nav-menu {
     width: 100vw;
-    position: absolute;
+    /* position: absolute; */
     max-height: 0px;
-    top: 43px;
+    /* top: 41px; */
     align-items: flex-start;
     flex-direction: column;
-    left: -19px;
+    /* left: -14px; */
   }
 
   .nav-menu-item {
@@ -153,6 +178,14 @@
     border-bottom: solid 1px #000;
     background: #474545;
     padding: 15px;
+  }
+
+  .nav-menu-item:hover {
+    transition: 0.3s ease-out;
+    background-color: #74c043;
+  }
+  .nav-menu-item a:hover {
+    color: #fff;
   }
   .nav-menu-item a {
     color: #fff;
