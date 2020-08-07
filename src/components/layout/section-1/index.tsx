@@ -2,6 +2,7 @@ import React from 'react';
 import './index.css';
 import loveLogo from '../../../images/love-water-savings-logo.png';
 import trustLogo from '../../../images/trust-pilot-logo.svg';
+import QuoteForm from '../quote-form';
 
 interface Props {
   title: string;
@@ -24,7 +25,7 @@ const SectionOne: React.FC<Props> = ({ title, firstP, secondP, thirdP }) => {
             <img src={trustLogo} alt="Logo" width="100px" />
           </div>
         </div>
-        <div className="quote-form"></div>
+        <QuoteForm />
       </div>
     </section>
   );

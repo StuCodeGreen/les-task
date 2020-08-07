@@ -1,0 +1,11 @@
+.quote-form {
+  min-width: 350px;
+  background-color: pink;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .quote-form {
+    min-width: 100%;
+  }
+}
