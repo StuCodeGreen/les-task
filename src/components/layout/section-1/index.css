@@ -1,0 +1,28 @@
+.section-one {
+  height: 391px;
+  background-color: #75c043;
+}
+
+.section-one-content {
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.quote-form {
+  min-width: 350px;
+  background-color: pink;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .section-one-content {
+    flex-direction: column;
+    padding: 0px;
+  }
+
+  .quote-form {
+    min-width: 100%;
+  }
+}
