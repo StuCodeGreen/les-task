@@ -4,26 +4,32 @@ import './index.css';
 
 function Nav() {
   return (
-    <nav className="nav">
+    <header className="nav">
       <div className="nav-content">
         <div className="nav-content nav-left">
-          <div className="nav-logo">
-            <img src={logo} alt="Logo" />
-          </div>
-          <ul className="nav-content nav-menu">
-            <li className="nav-menu-item">
-              <a href="#business-energy">Business Energy</a>
-            </li>
-            <li className="nav-menu-item">
-              <a href="#home-energy">Home Energy</a>
-            </li>
-            <li className="nav-menu-item">
-              <a href="#other-services">Other Services</a>
-            </li>
-            <li className="nav-menu-item">
-              <a href="#about-us">About us</a>
-            </li>
-          </ul>
+          <nav className="nav-content navigation">
+            <input className="menu-btn" type="checkbox" id="menu-btn" />
+            <label className="menu-icon" htmlFor="menu-btn">
+              <span className="navicon"></span>
+            </label>
+            <div className="nav-logo">
+              <img src={logo} alt="Logo" />
+            </div>
+            <ul className="nav-menu">
+              <li className="nav-menu-item">
+                <a href="#business-energy">Business Energy</a>
+              </li>
+              <li className="nav-menu-item">
+                <a href="#home-energy">Home Energy</a>
+              </li>
+              <li className="nav-menu-item">
+                <a href="#other-services">Other Services</a>
+              </li>
+              <li className="nav-menu-item">
+                <a href="#about-us">About us</a>
+              </li>
+            </ul>
+          </nav>
         </div>
         <div className="nav-right">
           <a href="tel:08009888375" className="nav-phone">
@@ -34,7 +40,7 @@ function Nav() {
           </a>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }
 

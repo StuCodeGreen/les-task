@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
+  padding-top: 10px;
 }
 .nav .nav-content {
   width: 100%;
@@ -9,10 +10,19 @@
   flex-direction: row;
   align-items: center;
 }
-
+.navigation {
+  position: relative;
+}
 .nav-menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   list-style: none;
   justify-content: center;
+  max-height: none;
+  transition: max-height 0.3s ease-out;
+  overflow: hidden;
 }
 
 .nav-logo img {
@@ -45,11 +55,116 @@
   display: none;
 }
 
+/* hamburger */
+
+.navigation .menu-icon {
+  cursor: pointer;
+  padding: 10px 10px 10px 0px;
+  position: relative;
+  user-select: none;
+}
+
+.navigation .menu-icon .navicon {
+  background: #74c043;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.3s ease-out;
+  width: 30px;
+}
+
+.navigation .menu-icon .navicon:before,
+.navigation .menu-icon .navicon:after {
+  background: #74c043;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.3s ease-out;
+  width: 100%;
+}
+
+.navigation .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.navigation .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* hamburger btn */
+
+.navigation .menu-btn {
+  display: none;
+}
+
+.navigation .menu-btn:checked ~ .nav-menu {
+  max-height: 240px;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.navigation .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
 @media (max-width: 1050px) {
   .phone-number {
     display: none;
   }
+
   .phone-icon {
     display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-logo img {
+    width: 80px;
+    padding: 0px;
+    padding-top: 1px;
+  }
+  .nav-menu {
+    width: 100vw;
+    position: absolute;
+    max-height: 0px;
+    top: 43px;
+    align-items: flex-start;
+    flex-direction: column;
+    left: -19px;
+  }
+
+  .nav-menu-item {
+    width: 100%;
+    border-bottom: solid 1px #000;
+    background: #474545;
+    padding: 15px;
+  }
+  .nav-menu-item a {
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation .menu-icon {
+    display: none;
+  }
+
+  .navigation .menu {
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    max-height: none;
   }
 }

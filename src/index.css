@@ -29,15 +29,19 @@ body {
   justify-content: center;
 }
 
+#root {
+  width: 100%;
+  min-width: 320px;
+}
+
 div {
-  border: 1px dashed red;
+  /* border: 1px dashed red; */
 }
 
 .container {
-  display: flex;
-  justify-content: center;
   padding-right: 15px;
   padding-left: 15px;
+  margin: 0px auto 0px auto;
 }
 
 @media (min-width: 768px) {
