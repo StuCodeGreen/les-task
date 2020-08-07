@@ -5,7 +5,9 @@ import Nav from './components/layout/Nav';
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <header className="container">
+        <Nav />
+      </header>
     </div>
   );
 }

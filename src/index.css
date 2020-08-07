@@ -20,9 +20,19 @@ html {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   overflow-wrap: break-word;
-  background-color: #e5e5e5;
+  background-color: #ffffff;
 }
 body {
   box-sizing: border-box;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+div {
+  border: 1px dashed red;
+}
+
+.container {
+  max-width: 1200px;
 }

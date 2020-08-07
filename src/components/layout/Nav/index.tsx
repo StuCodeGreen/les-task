@@ -1,14 +1,15 @@
 import React from 'react';
 import logo from '../../../images/love-energy-savings-logo.png';
+import './index.css';
 function Nav() {
   return (
     <nav className="nav">
       <div className="nav-content">
-        <div className="nav-left">
+        <div className="nav-content nav-left">
           <div className="nav-logo">
             <img src={logo} alt="Logo" />
           </div>
-          <ul className="nav-menu">
+          <ul className="nav-content nav-menu">
             <li className="nav-menu-item">
               <a href="#business-energy">Business Energy</a>
             </li>
